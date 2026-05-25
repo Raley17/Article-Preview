@@ -132,10 +132,8 @@ footer {
 }
 
 @media screen and (min-width: 1440px) {
-  body {
-    font-size: 18px;
-  }
   article {
+    margin-top: 2em;
     max-width: none;
     display: flex;
     width: 45em;
