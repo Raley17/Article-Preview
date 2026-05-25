@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="./main.js"></script>
     <title>Frontend Mentor | Article preview component</title>
   </head>
   <body>
@@ -23,50 +24,58 @@
       <article>
         <section class="image"></section>
 
-        <section class="text">
-          <h1>
-            Shift the overall look and feel by adding these wonderful touches to
-            furniture in your home
-          </h1>
-          <p>
-            Ever been in a room and felt like something was missing? Perhaps it
-            felt slightly bare and uninviting. I’ve got some simple tips to help
-            you make any room feel complete.
-          </p>
-        </section>
-
-        <section class="profile">
-          <img
-            src="./images/avatar-michelle.jpg"
-            alt="Avatar Photo"
-            class="avatar"
-          />
-
-          <div>
-            <p><span>Michelle Appleton</span></p>
-            <p>28 Jun 2020</p>
-          </div>
-          <img src="./images/icon-share.svg" alt="Share Icon" class="share" />
-        </section>
-
-        <section class="override">
-          <p>Share</p>
-          <img src="./images/icon-facebook.svg" alt="Facebook Icon" />
-          <img src="./images/icon-twitter.svg" alt="Twitter Icon" />
-          <img src="./images/icon-pinterest.svg" alt="Pinterest Icon" />
-          <img
-            src="./images/icon-share.svg"
-            alt="Share Icon"
-            class="share-active"
-          />
-        </section>
+        <div class="separated">
+          <section class="text">
+            <h1>
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+            </h1>
+            <p>
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I’ve got some simple tips to
+              help you make any room feel complete.
+            </p>
+          </section>
+          <section class="profile">
+            <img
+              src="./images/avatar-michelle.jpg"
+              alt="Avatar Photo"
+              class="avatar"
+            />
+            <div>
+              <p><span>Michelle Appleton</span></p>
+              <p>28 Jun 2020</p>
+            </div>
+            <img
+              src="./images/icon-share.svg"
+              alt="Share Icon"
+              class="share"
+              id="sharebutton"
+            />
+          </section>
+          <section class="override" id="override">
+            <div>
+              <p><span>Share</span></p>
+            </div>
+            <img src="./images/icon-facebook.svg" alt="Facebook Icon" />
+            <img src="./images/icon-twitter.svg" alt="Twitter Icon" />
+            <img src="./images/icon-pinterest.svg" alt="Pinterest Icon" />
+            <img
+              src="./images/icon-share.svg"
+              alt="Share Icon"
+              class="sharetwo"
+              id="activeshare"
+            />
+          </section>
+        </div>
       </article>
     </main>
 
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      <br />
+      Coded by <a href="#">Raley17</a>.
     </footer>
   </body>
 </html>

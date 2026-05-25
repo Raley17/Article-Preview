@@ -13,11 +13,19 @@
 }
 
 body {
+  height: 100vh;
   background-color: var(--color-4);
   font-family: "Manrope", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 article {
+  max-width: 326px;
+
+  position: relative;
   background-color: var(--color-5);
   margin: 1.5em;
   border-radius: 0.75em 0.75em 0.75em 0.75em;
@@ -57,7 +65,7 @@ article {
   align-items: center;
   gap: 1em;
   padding: 1em 2em;
-  z-index: 1;
+  z-index: 2;
   p {
     font-size: 0.8em;
     color: var(--color-3);
@@ -70,7 +78,8 @@ article {
     background-color: var(--color-4);
     border-radius: 1em;
     padding: 0.5em;
-    margin-left: 3em;
+    margin-left: 2.5em;
+    width: 2em;
   }
 }
 
@@ -80,13 +89,18 @@ article {
 }
 
 .override {
+  opacity: 0;
+  width: 20.41em;
+  position: absolute;
+  bottom: 0.01px;
   border-radius: 0em 0em 0.75em 0.75em;
-  z-index: 0;
+  z-index: -1;
   background-color: var(--color-1);
-  padding: 1em 2em;
+  padding: 1.2em 2em;
   display: flex;
   align-items: center;
   gap: 1em;
+  transition: 0.3s ease all;
   img {
     width: 1.25em;
   }
@@ -97,9 +111,94 @@ article {
     color: var(--color-3);
   }
 
-  .share-active {
-    background-color: var(--color-3);
-    width: 1.25em;
+  .sharetwo {
+    filter: brightness(1.85);
+    background-color: var(--color-1);
+    width: 2em;
+    padding: 0.5em;
     border-radius: 1em;
+    margin-left: 2.1em;
+    margin-bottom: 0.125em;
+  }
+}
+
+footer {
+  text-align: center;
+  color: var(--color-1);
+  a {
+    text-decoration: none;
+    color: var(--color-1);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    font-size: 18px;
+  }
+  article {
+    max-width: none;
+    display: flex;
+    width: 45em;
+    height: 75%;
+
+    .image {
+      background-size: 130%;
+      background-position: -1em 0em;
+      width: 50em;
+      height: auto;
+      border-radius: 0.75em 0em 0em 0.75em;
+    }
+
+    .separated {
+      .text {
+        h1 {
+          font-size: 1.25em;
+          color: var(--color-1);
+          line-height: 1.5em;
+          margin: 2em 0em 1em 0em;
+          padding: 0em 1.5em;
+        }
+        p {
+          font-size: 0.825em;
+          color: var(--color-2);
+          line-height: 1.75em;
+          margin-bottom: 1em;
+          padding: 0em 2em;
+          font-weight: 500;
+        }
+      }
+
+      .profile {
+        margin-bottom: 1em;
+
+        .share {
+          margin-left: 8em;
+        }
+      }
+
+      .override {
+        position: relative;
+        border-radius: 0.75em;
+        width: 16em;
+        padding: 0.75em 3em;
+        left: 14.5em;
+        bottom: 8.5em;
+        .sharetwo {
+          position: relative;
+          top: 3.6em;
+          right: 9.5em;
+        }
+      }
+
+      .override::before {
+        content: "";
+        position: absolute;
+        bottom: -1em;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 0.5em solid transparent;
+        border-top-color: var(--color-1);
+      }
+    }
   }
 }
