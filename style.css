@@ -136,8 +136,9 @@ footer {
     margin-top: 2em;
     max-width: none;
     display: flex;
-    width: 45em;
-    height: 75%;
+    width: 50em;
+    height: 20em;
+    box-shadow: rgba(0, 0, 0, 0.15) 0.75em 0.75em 1em;
 
     .image {
       background-size: 130%;
@@ -148,16 +149,17 @@ footer {
     }
 
     .separated {
+      padding: 0em 1em 0em 1em;
       .text {
         h1 {
           font-size: 1.25em;
           color: var(--color-1);
           line-height: 1.5em;
-          margin: 2em 0em 1em 0em;
-          padding: 0em 1.5em;
+          margin: 1.75em 0em 1em 0em;
+          padding: 0em 2em 0em 1.5em;
         }
         p {
-          font-size: 0.825em;
+          font-size: 0.85em;
           color: var(--color-2);
           line-height: 1.75em;
           margin-bottom: 1em;
